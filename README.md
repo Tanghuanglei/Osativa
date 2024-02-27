@@ -26,7 +26,7 @@ head(keys(org.OsativaT10.eg.db,keytypes = "GID"))
 library("clusterProfiler")
 GID2SYMBOL <- bitr(GID_list,fromType="GID",toType="SYMBOL",OrgDb=org.OsativaT10.eg.db)
 ```
-#What's more
+# What's more
 Sometimes when you use this orgdb to do the go enrich analysis, choose the ont="ALL", there may be a problem that will happen, some rows of the ONTOLOGY column are show the NA.  I don't know the reason, one way to deal with the problem is using the GO2ON.xlsx to make a correct result
 ``` R
 go_result <- enrichGo(gene_list,OrgDb=org.OsativaT10.eg.db,keyType="GID",ont="ALL")
@@ -36,3 +36,4 @@ GO2ON <- read.xlsx("the path you put the GO2ON.xlsx",1,header=TRUE)
 result <- merge(result,GO2ON,by.x="ID",by.y="GO",all.x=TRUE)
 go_result@result <- result
 ```
+I have make a go2on.xlsx in this reposite, you can download and use this to deal with this problem
