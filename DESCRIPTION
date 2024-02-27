@@ -1,0 +1,13 @@
+Package: org.OsativaT10.eg.db
+Title: Genome wide annotation for Os sativaT10
+Description: Genome wide annotation for Os sativaT10, primarily based on mapping using Entrez Gene identifiers.
+Version: 1.0
+Author: tanghuanglei<huangleitang@hotmail.com>
+Maintainer: tanghuanglei<huangleitang321@hotmail.com>
+Depends: R (>= 2.7.0), methods, AnnotationDbi (>= 1.64.1)
+Suggests: DBI, annotate, RUnit
+License: Artistic-2.0
+organism: Os sativaT10
+species: Os sativaT10
+biocViews: OrgDb, annotation
+
